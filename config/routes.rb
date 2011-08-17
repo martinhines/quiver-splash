@@ -1,5 +1,9 @@
 QuiverSplash::Application.routes.draw do
   resources :users
+  match '/thankyou',    :to => 'users#thankyou'
+  root :to => 'users#new'
+  match "users/check_email", :to => "users#check_email"
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

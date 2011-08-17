@@ -32,6 +32,15 @@ class UsersController < ApplicationController
     end
   end
 
+  def thankyou
+    @user = User.last
+
+    respond_to do |format|
+      format.html # show.html.erb
+      format.xml  { render :xml => @user }
+    end
+  end
+
   # GET /users/1/edit
   def edit
     @user = User.find(params[:id])
@@ -44,7 +53,7 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
-        format.html { redirect_to(@user, :notice => 'User was successfully created.') }
+        format.html { redirect_to(thankyou_path, :notice => 'User was successfully created.') }
         format.xml  { render :xml => @user, :status => :created, :location => @user }
       else
         format.html { render :action => "new" }
@@ -66,6 +75,14 @@ class UsersController < ApplicationController
         format.html { render :action => "edit" }
         format.xml  { render :xml => @user.errors, :status => :unprocessable_entity }
       end
+    end
+  end
+
+  def check_email
+    @user = User.find_by_email(params[:user][:email])
+
+    respond_to do |format|
+      format.json { render :json => !@user }
     end
   end
 
