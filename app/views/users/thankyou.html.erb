@@ -8,12 +8,10 @@
 		<img id="splash-img"src="/images/quiver-bg-image.JPG" alt="The Quiver Shack" title="The Quiver Shack" />
 		<div id="thank-you">
 			<div id="thank-you-msg">
-				<p></p>
-				<%= @user.first_name %> <%= @user.last_name %>,
-				Thank you for signing up with The Quiver Shack.
-			    An email will be sent to <%= @user.email %> notifying you of our launch.
-
-				<em><strong>quiv·er·shack</strong></em><span style="font:smaller 'Doulos SIL','Gentum','TITUS Cyberbit Basic','Junicode','Aborigonal Serif','Arial Unicode MS','Lucida Sans Unicode','Chrysanthi Unicode';margin:0 0 0 .7em">/ˈkwivər/</span><span style="font:smaller 'Doulos SIL','Gentum','TITUS Cyberbit Basic','Junicode','Aborigonal Serif','Arial Unicode MS','Lucida Sans Unicode','Chrysanthi Unicode';margin:0 0 0 .7em">/SHak/</span>
+				<h1><em><strong>quiv·er·shack</strong></em><span style="font:smaller 'Doulos SIL','Gentum','TITUS Cyberbit Basic','Junicode','Aborigonal Serif','Arial Unicode MS','Lucida Sans Unicode','Chrysanthi Unicode';margin:0 0 0 .7em">/ˈkwivər/</span><span style="font:smaller 'Doulos SIL','Gentum','TITUS Cyberbit Basic','Junicode','Aborigonal Serif','Arial Unicode MS','Lucida Sans Unicode','Chrysanthi Unicode';margin:0 0 0 .7em">/SHak/</span></h1>
+				<span style="line-height: 35px"><%= @user.first_name %> <%= @user.last_name %>,<br>
+				Thank you for signing up with The Quiver Shack.<br>
+			    An email will be sent to <%= @user.email %> notifying you of our launch.</span>
 			</div>
 		</div>
 	</body>
