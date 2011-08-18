@@ -25,8 +25,8 @@ div.field, div.actions {
 }
 
 .field_with_errors {
-  padding: 2px;
-  background-color: red;
+  padding: .5px;
+  background-color: orangered;
   display: table;
 }
 
@@ -37,6 +37,7 @@ div.field, div.actions {
   padding-bottom: 0;
   margin-bottom: 20px;
   background-color: #f0f0f0;
+  display: none;
 }
 
 #error_explanation h2 {
@@ -48,9 +49,11 @@ div.field, div.actions {
   margin-bottom: 0px;
   background-color: #c00;
   color: #fff;
+  display: none;
 }
 
 #error_explanation ul li {
   font-size: 12px;
   list-style: square;
+  display: none;
 }
