@@ -100,3 +100,10 @@ input#user_submit {
 	font-size: 24px;
 	width: 540px;
 }
+input.error{
+	border: 1px solid orangered;
+}
+label.error{
+	color: orangered;
+	font-size: 15px;
+}
